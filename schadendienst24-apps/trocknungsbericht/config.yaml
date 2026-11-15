@@ -1,0 +1,62 @@
+name: Trocknungsbericht
+version: 0.3.0
+slug: trocknungsbericht
+description: Lokale PDF-Trocknungsberichte
+arch:
+- aarch64
+- amd64
+init: false
+startup: application
+boot: manual
+homeassistant_api: true
+map:
+- type: homeassistant_config
+  read_only: false
+hassio_api: true
+hassio_role: default
+ports:
+  8099/tcp: null
+ports_description:
+  8099/tcp: Trocknungsbericht API
+options:
+  th1_a_feuchte: sensor.th1_humidity
+  th1_a_temperatur: sensor.th1_air_temperature
+  th2_a_feuchte: sensor.th2_humidity
+  th2_a_temperatur: sensor.th2_air_temperature
+  th3_a_feuchte: sensor.th3_humidity
+  th3_a_temperatur: sensor.th3_air_temperature
+  th4_a_feuchte: sensor.th4_humidity
+  th4_a_temperatur: sensor.th4_air_temperature
+  th5_a_feuchte: sensor.th5_humidity
+  th5_a_temperatur: sensor.th5_air_temperature
+  th6_a_feuchte: sensor.th6_humidity
+  th6_a_temperatur: sensor.th6_air_temperature
+  th7_a_feuchte: sensor.th7_humidity
+  th7_a_temperatur: sensor.th7_air_temperature
+  th8_a_feuchte: sensor.th8_humidity
+  th8_a_temperatur: sensor.th8_air_temperature
+  kanal1_schalter: switch.smart_plug_1
+  kanal2_schalter: switch.smart_plug_2
+  kanal3_schalter: switch.smart_plug_3
+  trocknungsbeginn_entitaet: input_datetime.kwh_reset
+schema:
+  th1_a_feuchte: str
+  th1_a_temperatur: str
+  th2_a_feuchte: str
+  th2_a_temperatur: str
+  th3_a_feuchte: str
+  th3_a_temperatur: str
+  th4_a_feuchte: str
+  th4_a_temperatur: str
+  th5_a_feuchte: str
+  th5_a_temperatur: str
+  th6_a_feuchte: str
+  th6_a_temperatur: str
+  th7_a_feuchte: str
+  th7_a_temperatur: str
+  th8_a_feuchte: str
+  th8_a_temperatur: str
+  kanal1_schalter: str
+  kanal2_schalter: str
+  kanal3_schalter: str
+  trocknungsbeginn_entitaet: str
